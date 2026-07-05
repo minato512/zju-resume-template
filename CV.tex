@@ -70,50 +70,59 @@
 
 \centerline{\LARGE\bfseries{徐焱}} 
 
-\centerline{\normalsize{\faPhone\ +49 01626043616 \quad \faEnvelopeO\ \href{mailto:xu1398970260@163.com}{xu1398970260@163.com}}} 
+\centerline{\normalsize{\faPhone\ +49 01626043616 \quad \faEnvelopeO\ \href{mailto:1398970260@qq.com}{1398970260@qq.com}}} 
 
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
 \textbf{德国弗莱堡大学 (University of Freiburg)} \hfill 2025.10 -- 至今\\[0.3em]
 嵌入式系统工程 (ESE) \quad 硕士研究生
 \begin{itemize}
-    \item 核心课程：微系统技术与工艺(MST)、模拟电路设计基础、半导体器件物理、集成电路设计
+    \item 核心课程：微系统技术与工艺(MST)、计算机体系结构、机器学习、嵌入式系统导论
 \end{itemize}
 \textbf{武汉轻工大学} \hfill 2020.09 -- 2024.06\\[0.3em]
 通信工程 \quad 本科
 \begin{itemize}
-    \item 核心课程：电路分析、模拟电子技术、数字电子技术、信号与系统
+    \item 核心课程：嵌入式系统设计、微机原理、信号与系统、数字信号处理
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 \begin{itemize}
-    \item \textbf{模拟/混合信号：} 掌握运放、滤波器、ADC/DAC设计原理；熟悉信号完整性与阻抗匹配。
-    \item \textbf{EDA工具：} 熟练使用 \textbf{Multisim}；了解 \textbf{Cadence Virtuoso}、\textbf{Hspice/Spectre} 仿真流程。
-    \item \textbf{软硬底层：} 精通C/C++，熟悉ARM架构与底层驱动；熟练使用示波器、万用表及信号发生器。
-    \item \textbf{系统环境：} 熟悉Linux环境，具备Shell自动化脚本编写与Git版本控制能力。
+    \item \textbf{模拟/混合信号：} 熟悉模拟电路原理，掌握 \textbf{Multisim} 仿真；了解 \textbf{Cadence Virtuoso} 与 \textbf{Hspice/Spectre} 仿真环境。
+    \item \textbf{嵌入式开发：} 精通 C/C++，熟悉 ARM Cortex-M 架构及 STM32 硬件底层驱动开发。
+    \item \textbf{测试与调试：} 熟练操作示波器、万用表及信号发生器等调试设备，具备深厚的软硬件联调经验。
+    \item \textbf{系统环境：} 熟悉 Linux 环境，具备 Git 版本控制、Shell 脚本编写及 Python 推理优化能力。
 \end{itemize}
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
-\textbf{高精度生理信号模拟前端(AFE)采集系统研发} \hfill \titlebreak
-项目描述：主导生理信号模拟前端链路设计，实现微伏级信号采集与处理。
+\textbf{一、高精度生理信号模拟前端(AFE)采集系统研发} \hfill \titlebreak
+项目描述：基于 STM32 开发高精度信号采集装置，负责模拟前端电路设计与系统集成。
 \begin{itemize}[topsep=\intraProjectListTopSep]
-    \item \textbf{链路设计：} 设计基于运算放大器的多级调理电路，实现信号的高精度放大与预处理。
-    \item \textbf{仿真验证：} 利用 \textbf{Multisim} 完成50Hz陷波与低通滤波链路仿真，验证频率响应特性。
-    \item \textbf{系统集成：} 通过抗混叠滤波与阻抗匹配优化，完成了从传感器到ADC的完整信号链闭环验证。
+    \item \textbf{模拟前端开发：} 设计多级运算放大器调理电路，实现微伏级生理信号的精密放大与预处理。
+    \item \textbf{信号链路仿真：} 利用 \textbf{Multisim} 进行频域分析，通过滤波器设计有效抑制工频干扰并优化信噪比。
+    \item \textbf{系统联调：} 负责 ADC 采样与 DMA 传输配置，解决复杂电磁环境下的信号漂移问题，满足信号处理规范。
 \end{itemize}
 
 \projectsep
 
-\textbf{车载以太网通信可靠性研究} \hfill \titlebreak
-项目描述：针对TSN车载场景，开展物理层信号分析与性能优化。
+\textbf{二、边缘计算与深度学习驱动的实时目标识别系统} \hfill \titlebreak
+项目描述：在树莓派边缘平台上部署 YOLOv8 轻量化模型，优化低算力硬件下的性能瓶颈。
 \begin{itemize}[topsep=\intraProjectListTopSep]
-    \item \textbf{信号分析：} 使用示波器监测车载以太网物理层电气信号，保障高频传输下的电气可靠性。
-    \item \textbf{性能优化：} 通过自动化脚本评估传输抖动与延迟，优化网络吞吐量 20\%。
+    \item \textbf{AI模型部署：} 负责模型的裁剪与量化处理，通过算子优化提升推理速度至 10-15 FPS。
+    \item \textbf{硬件性能优化：} 设计边缘网关数据预处理脚本，滤除冗余噪声数据，显著提升了系统的能效比与实时响应效率。
+\end{itemize}
+
+\projectsep
+
+\textbf{三、基于SDN的车载确定性网络(TSN)流量调度系统} \hfill \titlebreak
+项目描述：针对车载以太网场景，开展物理层信号分析与流量调度研究。
+\begin{itemize}[topsep=\intraProjectListTopSep]
+    \item \textbf{物理层电气分析：} 负责车载通信接口调试，使用\textbf{示波器}监测电气信号完整性，保障传输稳定性。
+    \item \textbf{性能评估：} 评估丢包与延迟的电气成因，通过路径切换策略优化流量调度，提升网络吞吐量 20\%。
 \end{itemize}
 
 \section{\makebox[\widthof{\faList}][c]{\color{CVBlue}\faList}\ 获奖情况 \& 其他}
 \begin{itemize}
-    \item 中国高校计算机大赛-网络技术挑战赛 省部级二等奖 / 三等奖
+    \item 中国高校计算机大赛-网络技术挑战赛，省部级二等奖 / 三等奖
     \item \textbf{语言能力：} Native Mandarin, C1 English, A1 German (GRE 329, TOEFL 95)
 \end{itemize}
 
