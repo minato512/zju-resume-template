@@ -1,6 +1,5 @@
 \documentclass[11pt]{article}
 
-
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
 \usepackage{hyperref}
@@ -16,31 +15,25 @@
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage{enumitem}
-\CJKsetecglue{} %% 取消中文与数字之间的间隙
-
+\CJKsetecglue{}
 
 %% 主文档字体设置
 \setmainfont[
     Path = fonts/Main/,
     Extension = .otf,
-    BoldFont = texgyretermes-bold.otf, % 加粗字体
-]{texgyretermes-regular.otf} % 正文字体
+    BoldFont = texgyretermes-bold.otf,
+]{texgyretermes-regular.otf}
 
 % 中文字体设置
 \setCJKmainfont[
     Path = fonts/hansans/,
     Extension = .ttf,
-    BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
-]{NotoSansSC-Regular.otf} % 正文字体
-
+    BoldFont = NotoSansSC-Bold.ttf,
+]{NotoSansSC-Regular.otf}
 
 \usepackage{relsize}
 \usepackage{xspace}
-
-% 使用 fontawesome（部分图标）
-\usepackage{fontawesome} 
-
-% A4纸，上下左右边距
+\usepackage{fontawesome}
 \usepackage[
     a4paper,
     left=1.2cm,
@@ -50,106 +43,78 @@
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.5} % 行间距设为1.5
-
+\renewcommand{\baselinestretch}{1.3} 
 \usepackage{titlesec}
-\usepackage{enumitem}
-\setlist{noitemsep} % 取消列表项间的额外间距
-%\setlist{nosep} % 取消所有垂直间距
+\setlist{noitemsep}
 \setlist[itemize]{topsep=0.25em, leftmargin=*}
 \setlist[enumerate]{topsep=0.25em, leftmargin=*}
 
-% --- 用于控制【不同项目之间】的垂直距离 ---
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.9em} % <--- 在此调整项目之间的距离
+\setlength{\interProjectSpacing}{0.7em}
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
-
-% --- 用于控制【项目标题】与下方【项目描述】的距离 ---
 \newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.4em} % <--- 在此调整标题和描述的距离
+\setlength{\intraProjectTitleSep}{0.3em}
 \newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
-
-% --- 用于控制【项目描述】与下方【要点列表】的距离 ---
 \newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.2em} % <--- 在此调整描述和列表的距离
+\setlength{\intraProjectListTopSep}{0.1em}
 
-% =======================================================================
-
-
-\titleformat{\section}         % 定制 \section 命令 
-{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
-{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
-{}                           % 可用于在标题前插入代码
-[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
-\titlespacing*{\section}{0cm}{*1.6}{*1.2}
-
-
+\titleformat{\section}
+{\large\bfseries\raggedright}
+{}{0em}
+{}
+[{\color{CVBlue}\titlerule}]
+\titlespacing*{\section}{0cm}{*1.2}{*1.0}
 
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 利用tikz来定位照片
-\begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-  \end{tikzpicture}%
-  %%%% 利用tikz来定位学校Logo，这里只在第一页显示
-  \begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
-  \end{tikzpicture}%
-\centerline{\LARGE\bfseries{胡豆}} 
+\centerline{\LARGE\bfseries{徐焱}} 
 
-\centerline{\normalsize{\faPhone\ 111-1111-1111 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3230100000@zju.edu.cn}}} 
+\centerline{\normalsize{\faPhone\ +49 01626043616 \quad \faEnvelopeO\ \href{mailto:xu1398970260@163.com}{xu1398970260@163.com}}} 
 
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/maksymilan} \quad \faRssSquare\ \href{https://maksymilan.github.io/}{https://maksymilan.github.io}}} 
-    
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
-\textbf{浙江大学} \hfill 2023.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
-CC98烂坑挖掘工程与技术\quad 大二 
-\begin{itemize}[nosep]
-    \item 相关课程：《烂坑挖掘及基础》、《高级挖坑技巧》、《烂坑数理统计》
+\textbf{德国弗莱堡大学 (University of Freiburg)} \hfill 2025.10 -- 至今\\[0.3em]
+嵌入式系统工程 (ESE) \quad 硕士研究生
+\begin{itemize}
+    \item 核心课程：微系统技术与工艺(MST)、模拟电路设计基础、半导体器件物理、集成电路设计
+\end{itemize}
+\textbf{武汉轻工大学} \hfill 2020.09 -- 2024.06\\[0.3em]
+通信工程 \quad 本科
+\begin{itemize}
+    \item 核心课程：电路分析、模拟电子技术、数字电子技术、信号与系统
+\end{itemize}
+
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
+\begin{itemize}
+    \item \textbf{模拟/混合信号：} 掌握运放、滤波器、ADC/DAC设计原理；熟悉信号完整性与阻抗匹配。
+    \item \textbf{EDA工具：} 熟练使用 \textbf{Multisim}；了解 \textbf{Cadence Virtuoso}、\textbf{Hspice/Spectre} 仿真流程。
+    \item \textbf{软硬底层：} 精通C/C++，熟悉ARM架构与底层驱动；熟练使用示波器、万用表及信号发生器。
+    \item \textbf{系统环境：} 熟悉Linux环境，具备Shell自动化脚本编写与Git版本控制能力。
 \end{itemize}
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
-% --- 第一个项目 ---
-% 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{98烂坑风控与可视化作战平台} \hfill 2024.08 -- 至今 \titlebreak
-项目描述：为维护cc98社区的讨论纯度、净化“心灵之约”版块风气，本项目旨在对“烂坑”进行科学、严谨的量化分析，并引入\textbf{大语言模型(LLM)}对烂坑帖进行\textbf{自动化情感极性与“离谱指数”标注}。
-% 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
-\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据与后端}：运用 \textbf{Go} 语言及 \textbf{GORM} 框架，实现对全站“烂坑”帖的7x24小时全天候\textbf{抓取}与\textbf{入库}(MySQL)。
-    \item \textbf{可视化前端}：采用原生 \textbf{HTML/CSS/JS} 构建了“烂坑”实时监控\textbf{作战大屏}。实现了坑主成分分析、挖坑热力图、年度烂坑王榜单等\textbf{可视化图表}，并通过 \textbf{AJAX} 异步刷新，确保数据洞察的实时性。
-    \item \textbf{核心产出}：全面掌握了从\textbf{数据采集、清洗、LLM标注到可视化分析}的“反烂坑”全链路技术。
+\textbf{高精度生理信号模拟前端(AFE)采集系统研发} \hfill \titlebreak
+项目描述：主导生理信号模拟前端链路设计，实现微伏级信号采集与处理。
+\begin{itemize}[topsep=\intraProjectListTopSep]
+    \item \textbf{链路设计：} 设计基于运算放大器的多级调理电路，实现信号的高精度放大与预处理。
+    \item \textbf{仿真验证：} 利用 \textbf{Multisim} 完成50Hz陷波与低通滤波链路仿真，验证频率响应特性。
+    \item \textbf{系统集成：} 通过抗混叠滤波与阻抗匹配优化，完成了从传感器到ADC的完整信号链闭环验证。
 \end{itemize}
 
-% 使用 \projectsep 命令来分隔两个项目
 \projectsep
 
-% --- 第二个项目 ---
-\textbf{AIGC驱动的超进化自动挖坑机 (Agent)} \hfill 2025.02 -- 至今 \titlebreak
-项目描述：为探索心灵版规的边界，以及测试版主锁沉反应速度的极限，本项目基于\textbf{多智能体协作(MCP)与LLM}技术，开发了一款能\textbf{自主“挖坑”与“互坑”}的AI Agent。
-\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{并发与调度}：后端采用 \textbf{Go} 语言，充分利用 \textbf{Goroutine} 和 \textbf{Channel} 的高并发模型，模拟\textbf{用户并发在线}，执行定时挖坑，确保挖坑行动的\textbf{隐蔽性}与\textbf{高效性}。
-    \item \textbf{实时监控与响应}：运用 \textbf{WebSocket} 协议实现了对目标帖子的\textbf{实时监听与交互}。确保在烂坑被识破的第一时间，Agent能光速完成\textbf{“lktp”}或\textbf{反向钓鱼}操作，展现出极高的AI博弈能力。
-    \item \textbf{可视化GUI}：前端使用 \textbf{React} 框架构建了\textbf{后台管理的可视化面板 (Admin Panel)}。可一键下达挖坑指令、动态调整Agent的\textbf{指令}、并实时监控数据。
+\textbf{车载以太网通信可靠性研究} \hfill \titlebreak
+项目描述：针对TSN车载场景，开展物理层信号分析与性能优化。
+\begin{itemize}[topsep=\intraProjectListTopSep]
+    \item \textbf{信号分析：} 使用示波器监测车载以太网物理层电气信号，保障高频传输下的电气可靠性。
+    \item \textbf{性能优化：} 通过自动化脚本评估传输抖动与延迟，优化网络吞吐量 20\%。
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
-\begin{itemize}[nosep]
-    \item \textbf{编程语言：} \textbf{Go}, Python, C++
-    \item \textbf{开发工具：} SSH, Git, Vim, MakeFile,LaTex
-    \item \textbf{操作系统：} Linux
-\end{itemize}
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
+\section{\makebox[\widthof{\faList}][c]{\color{CVBlue}\faList}\ 获奖情况 \& 其他}
 \begin{itemize}
-    \item CC98年度用户 \hfill 2023.12
-    
+    \item 中国高校计算机大赛-网络技术挑战赛 省部级二等奖 / 三等奖
+    \item \textbf{语言能力：} Native Mandarin, C1 English, A1 German (GRE 329, TOEFL 95)
 \end{itemize}
-    
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
-\begin{itemize}[parsep=0.5ex]
-    \item \textbf{技术博客：} \href{https://maksymilan.github.io/}{https://maksymilan.github.io/}
-    \item \textbf{GitHub：} \href{https://github.com/maksymilan}{https://github.com/maksymilan} 
-    \item \textbf{英语水平：} CET-4, CET-6
-\end{itemize}
+
 \end{document}
